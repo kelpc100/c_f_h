@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cvss_style.css">
+    <title>Page One</title>
+</head>
+
+<body>
+    <section>
+        <div class ="area">
+            <h1>Attack Vector</h1>
+        </div>
+        <div class="content">
+            <h3>Network (N)</h3>
+            <p>
+                Attackers can only exploit this vulnerability through the network layer (remotely exploitable).
+            </p>
+            <h3>Adjacent (A)</h3>
+            <p>
+                Attackers can exploit this vulnerability only if they reside in the same physical or logical network (secure VPN included).
+            </p>
+            <h3>Local (L)</h3>
+            <p>
+                Attackers can exploit this vulnerability only by accessing the target system locally (e.g., keyboard, terminal, etc.) or remotely (e.g., SSH) or through user interaction.
+            </p>
+            <h3>Physical (P)</h3>
+            <p>
+                Attackers can exploit this vulnerability through physical interaction/manipulation.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>Attack Complexity</h1>
+        </div>
+        <div class="content">
+            <h3>Low (L)</h3>
+            <p>
+                No special preparations should take place to exploit the vulnerability successfully. The attackers can exploit the vulnerability repeatedly without any issue.
+            </p>
+            <h3>High (H)</h3>
+            <p>
+                Special preparations and information gathering should take place to exploit the vulnerability successfully.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>Privileges Required</h1>
+        </div>
+        <div class="content">
+            <h3>None (N)</h3>
+            <p>
+                No special access related to settings or files is required to exploit the vulnerability successfully. The vulnerability can be exploited from an unauthorized perspective.
+            </p>
+            <h3>Low (L)</h3>
+            <p>
+                Attackers should possess standard user privileges to exploit the vulnerability successfully. The exploitation in this case usually affects files and settings owned by a user or non-sensitive assets.
+            </p>
+            <h3>High (H)</h3>
+            <p>
+                Attackers should possess admin-level privileges to exploit the vulnerability successfully. The exploitation in this case usually affects the entire vulnerable system.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>User Interaction</h1>
+        </div>
+        <div class="content">
+            <h3>None (N)</h3>
+            <p>
+                Attackers can successfully exploit the vulnerability independently.
+            </p>
+            <h3>Required (R)</h3>
+            <p>
+                A user should take some action before the attackers can successfully exploit the vulnerability.
+            </p>
+        </div>
+    </section>
+    
+    <section>
+        <div class ="area">
+            <h1>Scope</h1>
+        </div>
+        <div class="content">
+            <h3>Unchanged (U)</h3>
+            <p>
+               Successful exploitation of the vulnerability affects the vulnerable component or affects resources managed by the same security authority.
+            </p>
+            <h3>Changed (C)</h3>
+            <p>
+                Successful exploitation of the vulnerability can affect components other than the affected one or resources beyond the scope of the affected component's security authority.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>Confidentiality</h1>
+        </div>
+        <div class="content">
+            <h3>None (N)</h3>
+            <p>
+                The confidentiality of the vulnerable component does not get impacted.
+            </p>
+            <h3>Low (L)</h3>
+            <p>
+                The vulnerable component will experience some loss of confidentiality upon successful exploitation of the vulnerability. In this case, the attackers do not have control over what information is obtained.
+            </p>
+            <h3>High (H)</h3>
+            <p>
+                The vulnerable component will experience total (or serious) loss of confidentiality upon successfully exploiting the vulnerability. In this case, the attackers have total (or some) control over what information is obtained.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>Integrity</h1>
+        </div>
+        <div class="content">
+            <h3>None (N)</h3>
+            <p>
+                The integrity of the vulnerable component does not get impacted.
+            </p>
+            <h3>Low (L)</h3>
+            <p>
+                Attackers can modify data in a limited manner on the vulnerable component upon successfully exploiting the vulnerability. Attackers do not have control over the consequence of a modification, and the vulnerable component does not get seriously affected in this case.
+            </p>
+            <h3>High (H)</h3>
+            <p>
+                Attackers can modify all or critical data on the vulnerable component upon successfully exploiting the vulnerability. Attackers have control over the consequence of a modification, and the vulnerable component will experience a total loss of integrity.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class ="area">
+            <h1>Integrity</h1>
+        </div>
+        <div class="content">
+            <h3>None (N)</h3>
+            <p>
+                The availability of the vulnerable component does not get impacted.
+            </p>
+            <h3>Low (L)</h3>
+            <p>
+                The vulnerable component will experience some loss of availability upon successfully exploiting the vulnerability. The attacker does not have complete control over the vulnerable component's availability and cannot deny the service to users, and performance is just reduced.
+            </p>
+            <h3>High (H)</h3>
+            <p>
+                The vulnerable component will experience total (or severe) availability loss upon successfully exploiting the vulnerability. The attacker has complete (or significant) control over the vulnerable component's availability and can deny the service to users. Performance is significantly reduced.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

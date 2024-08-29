@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+</head>
+
+<body>
+    <h1 id="greeting">My heading</h1>
+    <h2 class="schedule">My Class</h2>
+    <button>click me</button>
+    <button class="buttontwo">click me 2</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", handlingClick);
+        document.querySelector(".buttontwo").addEventListener("click", handlingClick);
+//        document.querySelector("button").addEventListener("click", handlingClick2);
+
+        function handlingClick(){
+            alert("i was clicked");
+        };
+
+        function handlingClick2(){
+            alert("i was clicked 2");
+        };
+
+        document.addEventListener('keydown', logkey);
+        function logkey(keyPress){
+            console.log('this key was pressed ' + keyPress.key);
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

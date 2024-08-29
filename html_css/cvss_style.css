@@ -1,0 +1,15 @@
+.area{
+    text-align: center;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    margin-top: 100px;
+    margin-right: 20px;
+}
+section{
+    padding-bottom: 250px;
+}

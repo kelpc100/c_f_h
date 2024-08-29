@@ -1,0 +1,35 @@
+.header{
+    background-image: url('Screenshot\ 2024-08-26\ 003843.jpg');
+    color: aliceblue;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    background-attachment: fixed;
+
+}
+.middle{
+    color: rgb(54, 54, 54);
+    background-color:beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom{
+    background-image: url('Screenshot\ 2024-08-26\ 003803.jpg');
+    color: rgb(158, 158, 158);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    min-height: 100vh;
+    scroll-snap-align: start;
+    flex-wrap: wrap;
+}
