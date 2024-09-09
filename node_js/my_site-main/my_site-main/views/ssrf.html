@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSRF</title>
+</head>
+
+<body>
+    <form id="ssrf-form" style="text-align: center;">
+        <h1>ssrf vulnerability</h1>
+        <input type="text" id="url-input" placeholder="Website">
+        <button type="submit">Fetch Data</button>
+    </form>
+    <div id="ssrf-response"></div>
+    
+    <script>
+        document.getElementById('ssrf-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            var url = document.getElementById('url-input').value;
+            fetch('/data',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({url:url})
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('ssrf-reponse').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(err => console.error('Error', err));
+
+        })
+    </script>
+</body>
+</html>
