@@ -3,8 +3,8 @@ const path = require("path")
 const bodyParser = require("body-parser");
 const exp = require("constants");
 const connection = require("/mnt/c/Users/kelp/Desktop/learning/coding_for_hackers/node_js/my_site-main/my_site-main/db.js")
-const net = require('net')
-const validator = require('validator')
+const net = require("net")
+const validator = require("validator")
  
 const app = express();
 app.use(express.urlencoded({extended: false}))
@@ -79,24 +79,28 @@ app.post('/data', (req,res) => {
 
 
 function checkPortOpen(host, port, timeout = 3000){
-  return new Promise((resolve, reject => {
-    const socket = new.net.Socket();
+    return new Promise((resolve, reject) => {
+      const socket = new net.Socket();
 
-    const onError = () =>{
-      socket.destroy();
-      reject('connection error')
-    };
-    socket.setTimeout(timeout);
-    socket.once('timeout', () =>{
-      socket.end();
-      reject('Timeout')
-    })
-    socket.once('error', onError);
-    socket.once('connect', () =>{
-      socket.end();
-      resolve('Port is open')
-    })
-  }))
+      const onError = () =>{
+          socket.destroy();
+          reject('connection error')
+      };
+
+      socket.setTimeout(timeout);
+      socket.once('timeout', () =>{
+          socket.end();
+          reject('Timeout')
+      });
+
+      socket.once('error', onError);
+      socket.once('connect', () =>{
+          socket.end();
+          resolve('Port is open')
+      });
+
+      socket.connect(port, host);
+    });
 }
 
 app.post('/data', async (req, res) => {
