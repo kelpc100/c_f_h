@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path")
 const bodyParser = require("body-parser");
 const exp = require("constants");
-const connection = require("/mnt/c/Users/kelp/Desktop/learning/coding_for_hackers/node_js/my_site-main/my_site-main/db.js")
+const connection = require("my_site-main/db.js")
 const net = require("net")
 const validator = require("validator")
  
